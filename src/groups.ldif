@@ -1,0 +1,53 @@
+#-------------------------------------------------
+# GROUPS
+#-------------------------------------------------
+dn: cn=Atko-Italy,ou=Groups,{{ LDAP_BASE_DN }}
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: Atko-Italy
+uniqueMember: uid=lrossi,ou=People,{{ LDAP_BASE_DN }}
+uniqueMember: uid=grusso,ou=People,{{ LDAP_BASE_DN }}
+uniqueMember: uid=mbianchi,ou=People,{{ LDAP_BASE_DN }}
+uniqueMember: uid=sromano,ou=People,{{ LDAP_BASE_DN }}
+
+dn: cn=Atko-France,ou=Groups,{{ LDAP_BASE_DN }}
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: Atko-France
+uniqueMember: uid=lmartin,ou=People,{{ LDAP_BASE_DN }}
+uniqueMember: uid=cbernard,ou=People,{{ LDAP_BASE_DN }}
+uniqueMember: uid=edubois,ou=People,{{ LDAP_BASE_DN }}
+uniqueMember: uid=amoreau,ou=People,{{ LDAP_BASE_DN }}
+
+dn: cn=Atko-USA,ou=Groups,{{ LDAP_BASE_DN }}
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: Atko-USA
+uniqueMember: uid=lsmith,ou=People,{{ LDAP_BASE_DN }}
+uniqueMember: uid=ojohnson,ou=People,{{ LDAP_BASE_DN }}
+uniqueMember: uid=nwilliams,ou=People,{{ LDAP_BASE_DN }}
+uniqueMember: uid=abrown,ou=People,{{ LDAP_BASE_DN }}
+
+dn: cn=Atko-Developers,ou=Groups,{{ LDAP_BASE_DN }}
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: Atko-Developers
+uniqueMember: uid=lrossi,ou=People,{{ LDAP_BASE_DN }}
+uniqueMember: uid=lmartin,ou=People,{{ LDAP_BASE_DN }}
+uniqueMember: uid=lsmith,ou=People,{{ LDAP_BASE_DN }}
+uniqueMember: uid=ojohnson,ou=People,{{ LDAP_BASE_DN }}
+
+dn: cn=Atko-Admins,ou=Groups,{{ LDAP_BASE_DN }}
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: Atko-Admins
+uniqueMember: uid=grusso,ou=People,{{ LDAP_BASE_DN }}
+uniqueMember: uid=abrown,ou=People,{{ LDAP_BASE_DN }}
+
+dn: cn=Atko-VPN-Users,ou=Groups,{{ LDAP_BASE_DN }}
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: Atko-VPN-Users
+uniqueMember: uid=lrossi,ou=People,{{ LDAP_BASE_DN }}
+uniqueMember: uid=cbernard,ou=People,{{ LDAP_BASE_DN }}
+uniqueMember: uid=nwilliams,ou=People,{{ LDAP_BASE_DN }}

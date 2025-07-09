@@ -1,0 +1,200 @@
+#-------------------------------------------------
+# USERS - Italy
+#-------------------------------------------------
+dn: uid=lrossi,ou=People,{{ LDAP_BASE_DN }}
+objectClass: inetOrgPerson
+objectClass: person
+cn: Lorenzo Rossi
+givenName: Lorenzo
+sn: Rossi
+uid: lrossi
+mail: l.rossi@atko.email
+userPassword: {SSHA}P@ssword2024!
+title: Senior Software Engineer
+employeeNumber: 10000
+departmentNumber: IT-DEV
+o: {{ LDAP_ORGANISATION }}
+postalAddress: Via Roma 1, Milano, Italy
+preferredLanguage: it
+
+dn: uid=grusso,ou=People,{{ LDAP_BASE_DN }}
+objectClass: inetOrgPerson
+objectClass: person
+cn: Giulia Russo
+givenName: Giulia
+sn: Russo
+uid: grusso
+mail: g.russo@atko.email
+userPassword: {SSHA}P@ssword2024!
+title: QA Engineer
+employeeNumber: 10001
+departmentNumber: IT-QA
+o: {{ LDAP_ORGANISATION }}
+postalAddress: Via Garibaldi 23, Torino, Italy
+preferredLanguage: it
+
+dn: uid=mbianchi,ou=People,{{ LDAP_BASE_DN }}
+objectClass: inetOrgPerson
+objectClass: person
+cn: Matteo Bianchi
+givenName: Matteo
+sn: Bianchi
+uid: mbianchi
+mail: m.bianchi@atko.email
+userPassword: {SSHA}P@ssword2024!
+title: DevOps Engineer
+employeeNumber: 10002
+departmentNumber: IT-OPS
+o: {{ LDAP_ORGANISATION }}
+postalAddress: Via Dante 5, Firenze, Italy
+preferredLanguage: it
+
+dn: uid=sromano,ou=People,{{ LDAP_BASE_DN }}
+objectClass: inetOrgPerson
+objectClass: person
+cn: Sofia Romano
+givenName: Sofia
+sn: Romano
+uid: sromano
+mail: s.romano@atko.email
+userPassword: {SSHA}P@ssword2024!
+title: Product Manager
+employeeNumber: 10003
+departmentNumber: IT-PROD
+o: {{ LDAP_ORGANISATION }}
+postalAddress: Via Manzoni 10, Napoli, Italy
+preferredLanguage: it
+
+#-------------------------------------------------
+# USERS - France
+#-------------------------------------------------
+dn: uid=lmartin,ou=People,{{ LDAP_BASE_DN }}
+objectClass: inetOrgPerson
+objectClass: person
+cn: Lucas Martin
+givenName: Lucas
+sn: Martin
+uid: lmartin
+mail: l.martin@atko.email
+userPassword: {SSHA}P@ssword2024!
+title: Network Engineer
+employeeNumber: 10004
+departmentNumber: IT-NET
+o: {{ LDAP_ORGANISATION }}
+postalAddress: 12 Rue Lafayette, Paris, France
+preferredLanguage: fr
+
+dn: uid=cbernard,ou=People,{{ LDAP_BASE_DN }}
+objectClass: inetOrgPerson
+objectClass: person
+cn: Chloé Bernard
+givenName: Chloé
+sn: Bernard
+uid: cbernard
+mail: c.bernard@atko.email
+userPassword: {SSHA}P@ssword2024!
+title: HR Specialist
+employeeNumber: 10005
+departmentNumber: HR
+o: {{ LDAP_ORGANISATION }}
+postalAddress: 7 Avenue des Champs, Lyon, France
+preferredLanguage: fr
+
+dn: uid=edubois,ou=People,{{ LDAP_BASE_DN }}
+objectClass: inetOrgPerson
+objectClass: person
+cn: Étienne Dubois
+givenName: Étienne
+sn: Dubois
+uid: edubois
+mail: e.dubois@atko.email
+userPassword: {SSHA}P@ssword2024!
+title: Marketing Manager
+employeeNumber: 10006
+departmentNumber: MKT
+o: {{ LDAP_ORGANISATION }}
+postalAddress: 9 Boulevard Saint-Michel, Marseille, France
+preferredLanguage: fr
+
+dn: uid=amoreau,ou=People,{{ LDAP_BASE_DN }}
+objectClass: inetOrgPerson
+objectClass: person
+cn: Amélie Moreau
+givenName: Amélie
+sn: Moreau
+uid: amoreau
+mail: a.moreau@atko.email
+userPassword: {SSHA}P@ssword2024!
+title: Sales Executive
+employeeNumber: 10007
+departmentNumber: SALES
+o: {{ LDAP_ORGANISATION }}
+postalAddress: 3 Place de la République, Bordeaux, France
+preferredLanguage: fr
+
+#-------------------------------------------------
+# USERS - USA
+#-------------------------------------------------
+dn: uid=lsmith,ou=People,{{ LDAP_BASE_DN }}
+objectClass: inetOrgPerson
+objectClass: person
+cn: Liam Smith
+givenName: Liam
+sn: Smith
+uid: lsmith
+mail: l.smith@atko.email
+userPassword: {SSHA}P@ssword2024!
+title: System Administrator
+employeeNumber: 10008
+departmentNumber: OPS-INFRA
+o: {{ LDAP_ORGANISATION }}
+postalAddress: 123 Main Street, San Francisco, CA, USA
+preferredLanguage: en
+
+dn: uid=ojohnson,ou=People,{{ LDAP_BASE_DN }}
+objectClass: inetOrgPerson
+objectClass: person
+cn: Olivia Johnson
+givenName: Olivia
+sn: Johnson
+uid: ojohnson
+mail: o.johnson@atko.email
+userPassword: {SSHA}P@ssword2024!
+title: Customer Support
+employeeNumber: 10009
+departmentNumber: CUST-SUP
+o: {{ LDAP_ORGANISATION }}
+postalAddress: 456 Elm Street, Chicago, IL, USA
+preferredLanguage: en
+
+dn: uid=nwilliams,ou=People,{{ LDAP_BASE_DN }}
+objectClass: inetOrgPerson
+objectClass: person
+cn: Noah Williams
+givenName: Noah
+sn: Williams
+uid: nwilliams
+mail: n.williams@atko.email
+userPassword: {SSHA}P@ssword2024!
+title: Data Analyst
+employeeNumber: 10010
+departmentNumber: DATA
+o: {{ LDAP_ORGANISATION }}
+postalAddress: 789 Oak Avenue, Austin, TX, USA
+preferredLanguage: en
+
+dn: uid=abrown,ou=People,{{ LDAP_BASE_DN }}
+objectClass: inetOrgPerson
+objectClass: person
+cn: Ava Brown
+givenName: Ava
+sn: Brown
+uid: abrown
+mail: a.brown@atko.email
+userPassword: {SSHA}P@ssword2024!
+title: Project Manager
+employeeNumber: 10011
+departmentNumber: PM
+o: {{ LDAP_ORGANISATION }}
+postalAddress: 321 Pine Street, Seattle, WA, USA
+preferredLanguage: en
