@@ -2,3 +2,5 @@
 old/
 data/
 .DS_Store
+test/
+tmp/

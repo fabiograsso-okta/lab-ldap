@@ -2,10 +2,8 @@
 -include .env
 export
 
-# This ensures that targets like 'start' don't conflict with a file named 'start'.
 .PHONY: help start start-logs stop stop-logs restart restart-logs logs build configure check-prereqs
 
-# Default target when 'make' is run without arguments.
 help:
 	@echo "Usage: make [target]"
 	@echo ""
@@ -14,16 +12,21 @@ help:
 	@echo "  stop           - Stops and removes all containers."
 	@echo "  restart        - Restarts containers in the background."
 	@echo "  logs           - Follows container logs."
-	@echo "  start-logs     - Checks prerequisites, starts containers, and follows logs."
-	@echo "  stop-logs      - Stops and removes all containers, showing latest logs."
-	@echo "  restart-logs   - Restarts containers and follows logs."
+	@echo "  start-logs     - Checks prerequisites, starts containers in the background, and follows logs."
+	@echo "  start-live     - Checks prerequisites, starts containers in live mode"
+	@echo "  restart-logs   - Restarts containers in the background and follows logs."
 	@echo "  build          - Forces a rebuild of the images from scratch."
+	@echo "  kill           - Kill the containers and remove orphans"
 	@echo "  configure      - Runs the interactive Okta agent configuration script."
 	@echo "  check-prereqs  - Runs prerequisite checks without starting the services."
 
 start: check-prereqs
 	@echo "--> Starting containers in detached mode..."
 	@docker-compose up -d
+
+star-live: check-prereqs
+	@echo "--> Starting containers in detached mode..."
+	@docker-compose up
 
 stop:
 	@echo "--> Stopping containers..."
@@ -32,26 +35,28 @@ stop:
 restart: stop start
 
 logs:
-	@echo "--> Tailing logs..."
+	@echo "--> Tailing and following logs..."
 	@docker-compose logs -f --tail=500
 
 start-logs: check-prereqs
 	@echo "--> Starting containers and attaching logs..."
-	@docker-compose up
+	@docker-compose up -d &
+	@sleep 5
+	@$(MAKE) logs
 
-stop-logs:
-	@echo "--> Stopping containers..."
-	@docker-compose down
-
-restart-logs: stop-logs start-logs
+restart-logs: stop start-logs
 
 build:
 	@echo "--> Forcing a rebuild of all images..."
 	@docker-compose build --no-cache --parallel --pull --force-rm
 
+kill:
+	@echo "--> Killing the containers and remove orphanse"
+	@docker-compose kill --remove-orphans
+
 configure:
 	@echo "--> Launching Okta agent configuration script..."
-	@docker-compose exec okta-agent /opt/Okta/OktaLDAPAgent/scripts/configure_agent.sh
+	@docker-compose exec okta-ldap-agent /opt/Okta/OktaLDAPAgent/scripts/configure_agent.sh
 
 check-prereqs:
 	@echo "--> Checking prerequisites..."
