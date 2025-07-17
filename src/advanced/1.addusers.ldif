@@ -2,8 +2,6 @@
 
 dn: uid=jarjar,ou=People,dc=galaxy,dc=universe
 objectClass: inetOrgPerson
-objectClass: organizationalPerson
-objectClass: person
 cn: Jar Jar
 givenName: Jar Jar
 sn: Binks
@@ -20,8 +18,6 @@ jpegPhoto:: /9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQ
 
 dn: uid=boba.fett,ou=People,dc=galaxy,dc=universe
 objectClass: inetOrgPerson
-objectClass: organizationalPerson
-objectClass: person
 cn: Boba Fett
 givenName: Boba
 sn: Fett
