@@ -16,10 +16,11 @@
         - ./src/ou.ldif:/container/service/slapd/assets/config/bootstrap/ldif/custom/50-ou.ldif:ro
         - ./src/users.ldif:/container/service/slapd/assets/config/bootstrap/ldif/custom/51-users.ldif:ro
         - ./src/groups.ldif:/container/service/slapd/assets/config/bootstrap/ldif/custom/52-groups.ldif:ro
+        - ./src/photos.ldif:/container/service/slapd/assets/config/bootstrap/ldif/custom/53-photos.ldif:ro
         - ./data/slapd/certs:/container/service/slapd/assets/certs
       command: --copy-service --loglevel debug
 
-    okta-ldap-agent:
+    okta-ldap-agent: 
       build: ./okta-agent
       platform: linux/amd64 # Workaround for compatibility with MacOS
       restart: unless-stopped
