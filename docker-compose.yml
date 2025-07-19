@@ -24,7 +24,6 @@
       build: ./okta-agent
       platform: linux/amd64 # Workaround for compatibility with MacOS
       restart: unless-stopped
-      privileged: true
       configs:
         - source: InstallOktaLDAPAgent.conf
           target: /opt/Okta/OktaLDAPAgent/conf/InstallOktaLDAPAgent.conf
